@@ -24,7 +24,6 @@ namespace DLTVWGPT
         {
             InitializeComponent();
 
-
         }
         public static void prepare(string a)
         {
