@@ -23,7 +23,6 @@ namespace DLTVWGPT
         public FrmMain()
         {
             InitializeComponent();
-
         }
         public static void prepare(string a)
         {
