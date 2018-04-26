@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{844F0779-C345-4B97-8DAF-0D55B5CE7646}</ProjectGuid>
+    <ProjectTypeGuids>{80d85812-7475-4db8-9a61-dd0ef1ebd354};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DLTLib</RootNamespace>
+    <AssemblyName>DLTLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Gizmox.WebGUI.Forms, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=c508b41386c60f1d">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Forms.Themes, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Common, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClsBhMc.cs" />
+    <Compile Include="Classes\ClsD.cs" />
+    <Compile Include="Classes\ClsDBCon.cs" />
+    <Compile Include="Classes\ClsFuncs.cs" />
+    <Compile Include="Classes\ClsMsgBox.cs" />
+    <Compile Include="Classes\ClsMSSQL.cs" />
+    <Compile Include="Classes\ClsQ.cs" />
+    <Compile Include="Classes\ClsReg.cs" />
+    <Compile Include="Classes\ClsVWG.cs" />
+    <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Controls\TreeViewComboBox\TreeViewComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeViewComboBox\TreeViewComboBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeViewComboBox\TreeViewComboBoxForm.Designer.cs">
+      <DependentUpon>TreeViewComboBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\de-AT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\de-DE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\DLTLib.dll" />
+    <Content Include="bin\Debug\DLTLib.pdb" />
+    <Content Include="bin\Debug\es-GT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\fa-IR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\fr-CA\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\Gizmox.WebGUI.Common.dll" />
+    <Content Include="bin\Debug\Gizmox.WebGUI.Common.xml" />
+    <Content Include="bin\Debug\Gizmox.WebGUI.Forms.dll" />
+    <Content Include="bin\Debug\Gizmox.WebGUI.Forms.Themes.dll" />
+    <Content Include="bin\Debug\Gizmox.WebGUI.Forms.xml" />
+    <Content Include="bin\Debug\he-IL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\is-IS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\ja-JP\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\nl-NL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\pl-PL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\pt-BR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\pt-PT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\sv-SE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\tr-TR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\Debug\zh-CHS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="obj\Debug\DLTLib.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DLTLib.dll" />
+    <Content Include="obj\Debug\DLTLib.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\TreeViewComboBox\TreeViewComboBoxForm.resx">
+      <DependentUpon>TreeViewComboBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Condition="" Project="$(MSBuildExtensionsPath)\Gizmox\v14.0\Net4.6\Gizmox.VWGLibrary.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

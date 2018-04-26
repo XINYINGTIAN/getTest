@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16D02BA9-7B9E-4AAC-8B4B-B58E84CDD09A}</ProjectGuid>
+    <ProjectTypeGuids>{563295b5-8906-4a76-be2d-ff8e711c1204};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DLTVWGPT</RootNamespace>
+    <AssemblyName>DLTVWGPT</AssemblyName>
+    <StartPageUrl>Form1.wgx</StartPageUrl>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartPageUrl>Form1.wgx</StartPageUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gizmox.WebGUI.Common, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Forms.Themes, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=263fa4ef694acff6, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Forms, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=c508b41386c60f1d, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gizmox.WebGUI.Server, Version=4.6.5701.0, Culture=neutral, PublicKeyToken=3de6eb684226c24d, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.5.6.4\lib\net40\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\de-AT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\de-DE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\de\System.Spatial.resources.dll" />
+    <Content Include="bin\DLTLib.dll" />
+    <Content Include="bin\DLTLib.pdb" />
+    <Content Include="bin\DLTVWGPT.dll" />
+    <Content Include="bin\DLTVWGPT.pdb" />
+    <Content Include="bin\es-GT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\es\System.Spatial.resources.dll" />
+    <Content Include="bin\fa-IR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\fr-CA\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\fr\System.Spatial.resources.dll" />
+    <Content Include="bin\Gizmox.WebGUI.Common.dll" />
+    <Content Include="bin\Gizmox.WebGUI.Common.xml" />
+    <Content Include="bin\Gizmox.WebGUI.Forms.dll" />
+    <Content Include="bin\Gizmox.WebGUI.Forms.Themes.dll" />
+    <Content Include="bin\Gizmox.WebGUI.Forms.xml" />
+    <Content Include="bin\Gizmox.WebGUI.Server.dll" />
+    <Content Include="bin\he-IL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\is-IS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\it\System.Spatial.resources.dll" />
+    <Content Include="bin\ja-JP\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\ja\System.Spatial.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Microsoft.Data.OData.xml" />
+    <Content Include="bin\Microsoft.Data.Services.Client.dll" />
+    <Content Include="bin\Microsoft.Data.Services.Client.xml" />
+    <Content Include="bin\Microsoft.Data.Services.dll" />
+    <Content Include="bin\Microsoft.Data.Services.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\nl-NL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\pl-PL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\pt-BR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\pt-PT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\sv-SE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Spatial.dll" />
+    <Content Include="bin\System.Spatial.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\tr-TR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\zh-CHS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Services.resources.dll" />
+    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Classes\bin\de-AT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\de-DE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\DLTLib.dll" />
+    <Content Include="Classes\bin\DLTLib.pdb" />
+    <Content Include="Classes\bin\DLTVWGPT.dll" />
+    <Content Include="Classes\bin\DLTVWGPT.pdb" />
+    <Content Include="Classes\bin\es-GT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\fa-IR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\fr-CA\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Common.dll" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Common.xml" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Forms.dll" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Forms.Themes.dll" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Forms.xml" />
+    <Content Include="Classes\bin\Gizmox.WebGUI.Server.dll" />
+    <Content Include="Classes\bin\he-IL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\is-IS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\ja-JP\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\Newtonsoft.Json.dll" />
+    <Content Include="Classes\bin\nl-NL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\pl-PL\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\pt-BR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\pt-PT\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\sv-SE\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\tr-TR\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="Classes\bin\zh-CHS\Gizmox.WebGUI.Forms.resources.dll" />
+    <Content Include="GRBB\grbsctl6.cab" />
+    <Content Include="GRBB\grbsctl6.exe" />
+    <Content Include="GRBB\grinstall\grbsctl6.cab" />
+    <Content Include="GRBB\grinstall\grbsctl6.exe" />
+    <Content Include="GRBB\js\CreateControl.js" />
+    <Content Include="GRBB\js\GRBB.js" />
+    <Content Include="GRBB\js\GRInstall.js" />
+    <Content Include="GRBB\js\grinstall\grbsctl6.cab" />
+    <Content Include="GRBB\js\grinstall\grbsctl6.exe" />
+    <Content Include="GRBB\js\GRUtility.js" />
+    <Content Include="GRBB\js\test.js" />
+    <Content Include="GRBB\YgBB.aspx" />
+    <Content Include="GRBB\YgBBa.aspx" />
+    <Content Include="GRBB\YgBBb.aspx" />
+    <Content Include="GRBB\YgBBData.aspx" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ClsFuncsA.cs" />
+    <Compile Include="Classes\Controls\UCFuncsTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Controls\UCFuncsTree.Designer.cs">
+      <DependentUpon>UCFuncsTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DSJckja.cs">
+      <DependentUpon>DSJckja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DSJckja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSJckja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GRBB\js\DLTSqlReportData.cs" />
+    <Compile Include="GRBB\js\ReportData.cs" />
+    <Compile Include="GRBB\YgBB.aspx.cs">
+      <DependentUpon>YgBB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GRBB\YgBB.aspx.designer.cs">
+      <DependentUpon>YgBB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GRBB\YgBBa.aspx.cs">
+      <DependentUpon>YgBBa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GRBB\YgBBa.aspx.designer.cs">
+      <DependentUpon>YgBBa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GRBB\YgBBb.aspx.cs">
+      <DependentUpon>YgBBb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GRBB\YgBBb.aspx.designer.cs">
+      <DependentUpon>YgBBb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GRBB\YgBBData.aspx.cs">
+      <DependentUpon>YgBBData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GRBB\YgBBData.aspx.designer.cs">
+      <DependentUpon>YgBBData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="ValuesController1.cs" />
+    <Compile Include="XTGL\FrmConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmJGGL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmJGGL.Designer.cs">
+      <DependentUpon>FrmJGGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmMKGL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmMKGL.Designer.cs">
+      <DependentUpon>FrmMKGL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionLBLB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionLBLB.Designer.cs">
+      <DependentUpon>FrmOptionLBLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionLBXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionLBXX.Designer.cs">
+      <DependentUpon>FrmOptionLBXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionXMXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmOptionXMXX.Designer.cs">
+      <DependentUpon>FrmOptionXMXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmRoleFuncs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmRoleFuncs.Designer.cs">
+      <DependentUpon>FrmRoleFuncs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmRolesLB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmRolesLB.Designer.cs">
+      <DependentUpon>FrmRolesLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmRolesXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmRolesXX.Designer.cs">
+      <DependentUpon>FrmRolesXX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmYuanGongLB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmYuanGongLB.Designer.cs">
+      <DependentUpon>FrmYuanGongLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XTGL\FrmYuanGongXX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XTGL\FrmYuanGongXX.Designer.cs">
+      <DependentUpon>FrmYuanGongXX.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Classes\Controls\UCFuncsTree.resx">
+      <DependentUpon>UCFuncsTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="FrmPractice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPractice.Designer.cs">
+      <DependentUpon>FrmPractice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmPractice.resx">
+      <DependentUpon>FrmPractice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmJGGL.resx">
+      <DependentUpon>FrmJGGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmMKGL.resx">
+      <DependentUpon>FrmMKGL.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmOptionLBLB.resx">
+      <DependentUpon>FrmOptionLBLB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmOptionLBXX.resx">
+      <DependentUpon>FrmOptionLBXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmOptionXMXX.resx">
+      <DependentUpon>FrmOptionXMXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmRoleFuncs.resx">
+      <DependentUpon>FrmRoleFuncs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmRolesLB.resx">
+      <DependentUpon>FrmRolesLB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmRolesXX.resx">
+      <DependentUpon>FrmRolesXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmYuanGongLB.resx">
+      <DependentUpon>FrmYuanGongLB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTGL\FrmYuanGongXX.resx">
+      <DependentUpon>FrmYuanGongXX.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Datasets\DSJckja.xsc">
+      <DependentUpon>DSJckja.xsd</DependentUpon>
+    </Content>
+    <Content Include="bin\DLTVWGPT.dll.config" />
+    <Content Include="Classes\bin\DLTVWGPT.dll.config" />
+    <None Include="Datasets\DSJckja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSJckja.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Datasets\DSJckja.xss">
+      <DependentUpon>DSJckja.xsd</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="GRBB\js\grinstall\ygbb6.grf" />
+    <Content Include="GRBB\grf\ygbb1.grf" />
+    <Content Include="GRBB\grinstall\ygbb6.grf" />
+    <Content Include="GRBB\grf\ygbb2.grf" />
+    <None Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Generated\" />
+    <Folder Include="Resources\Icons\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\UserData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DLTLib\DLTLib.csproj">
+      <Project>{844f0779-c345-4b97-8daf-0d55b5ce7646}</Project>
+      <Name>DLTLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JXC\JXC.csproj">
+      <Project>{4dbf3e60-d2c3-47bf-a9b4-25f099ae8b10}</Project>
+      <Name>JXC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Condition="" Project="$(MSBuildExtensionsPath)\Gizmox\v14.0\Net4.6\Gizmox.VWGApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50076</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50076/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
