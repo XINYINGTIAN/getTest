@@ -22,6 +22,8 @@ namespace WCFTest
         // TODO: 在此添加您的服务操作
         [OperationContract]
         string GetAppSettings(string aKey);
+        [OperationContract]
+        int WriteConfig(string aDm, string aNr);
     }
 
 

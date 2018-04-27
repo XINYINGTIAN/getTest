@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using WCFTest.Classes;
 
 namespace WCFTest
 {
@@ -37,6 +38,14 @@ namespace WCFTest
             return
                 ConfigurationManager.AppSettings.Get(aKey);
         }
+        #endregion
+
+        #region WriteConfig的function
+        public int WriteConfig(string aDm, string aNr)
+        {
+            return ClsMSSQL.SetConfigItem(aDm, aNr, ClsDBCon.ConStrKj);
+        }
+
 
         #endregion
     }

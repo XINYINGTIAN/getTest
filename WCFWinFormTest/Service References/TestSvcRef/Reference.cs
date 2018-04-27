@@ -95,6 +95,12 @@ namespace WCFWinFormTest.TestSvcRef {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestSvc/GetAppSettings", ReplyAction="http://tempuri.org/ITestSvc/GetAppSettingsResponse")]
         System.Threading.Tasks.Task<string> GetAppSettingsAsync(string aKey);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestSvc/WriteConfig", ReplyAction="http://tempuri.org/ITestSvc/WriteConfigResponse")]
+        int WriteConfig(string aDm, string aNr);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITestSvc/WriteConfig", ReplyAction="http://tempuri.org/ITestSvc/WriteConfigResponse")]
+        System.Threading.Tasks.Task<int> WriteConfigAsync(string aDm, string aNr);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -146,6 +152,14 @@ namespace WCFWinFormTest.TestSvcRef {
         
         public System.Threading.Tasks.Task<string> GetAppSettingsAsync(string aKey) {
             return base.Channel.GetAppSettingsAsync(aKey);
+        }
+        
+        public int WriteConfig(string aDm, string aNr) {
+            return base.Channel.WriteConfig(aDm, aNr);
+        }
+        
+        public System.Threading.Tasks.Task<int> WriteConfigAsync(string aDm, string aNr) {
+            return base.Channel.WriteConfigAsync(aDm, aNr);
         }
     }
 }

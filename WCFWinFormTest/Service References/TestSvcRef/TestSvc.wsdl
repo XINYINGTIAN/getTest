@@ -25,6 +25,12 @@
   <wsdl:message name="ITestSvc_GetAppSettings_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAppSettingsResponse" />
   </wsdl:message>
+  <wsdl:message name="ITestSvc_WriteConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteConfig" />
+  </wsdl:message>
+  <wsdl:message name="ITestSvc_WriteConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteConfigResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITestSvc">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/ITestSvc/GetData" message="tns:ITestSvc_GetData_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="GetAppSettings">
       <wsdl:input wsaw:Action="http://tempuri.org/ITestSvc/GetAppSettings" message="tns:ITestSvc_GetAppSettings_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITestSvc/GetAppSettingsResponse" message="tns:ITestSvc_GetAppSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestSvc/WriteConfig" message="tns:ITestSvc_WriteConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestSvc/WriteConfigResponse" message="tns:ITestSvc_WriteConfig_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITestSvc" type="tns:ITestSvc">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAppSettings">
       <soap:operation soapAction="http://tempuri.org/ITestSvc/GetAppSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteConfig">
+      <soap:operation soapAction="http://tempuri.org/ITestSvc/WriteConfig" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
