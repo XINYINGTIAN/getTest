@@ -19,6 +19,8 @@ namespace DLTLib.Classes
         }
         public static void Cw(string mess)
         {
+            //MessageBoxButtons说明对话框中显示的按钮
+            //MessageBoxIcon说明对话框中显示的图标
             MessageBox.Show(mess, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public static void YesNo(string mess, EventHandler hdl)
@@ -35,6 +37,7 @@ namespace DLTLib.Classes
         {
             Cw(mess + "\n错误类型：" + ex.GetType() + "\n错误信息：\n" + ex.Message);
         }
+        //Cw(string mess, Exception ex)函数是Cw(string mess)函数的一个重载
     }
 
 }

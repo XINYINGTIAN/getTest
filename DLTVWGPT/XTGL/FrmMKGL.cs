@@ -42,8 +42,9 @@ namespace DLTVWGPT.XTGL
             if (!string.IsNullOrEmpty(e.Node.Name))
             {
                 int id = Int32.Parse(e.Node.Name);
+                //通过当前选中结点的Name获取对应模块在tfuncs表中的id值
                 tfuncs1TableAdapter1.FillById(dsJckja1.tfuncs1, id);
-
+                //调用tfuncs1TableAdapter1的FillById方法向tfuncs表对象中填入指定id的一条记录
             }
         }
         #region 引用模块树
@@ -120,7 +121,7 @@ namespace DLTVWGPT.XTGL
         private void btnSave_Click(object sender, EventArgs e)
         {
             bds.EndEdit();
-            //已认可方式结束编辑状态
+            //以认可方式结束编辑状态
             ClsD.TextBoxTrim(grpMain);
             //进行去首尾空格
             if (string.IsNullOrEmpty(txtXh.Text))
@@ -164,7 +165,9 @@ namespace DLTVWGPT.XTGL
         private void btnCancel_Click(object sender, EventArgs e)
         {
             bds.CancelEdit();
+            //以取消方式结束编辑状态
             dsJckja1.tfuncs1.RejectChanges();
+            //将暂存到tfuncs1中尚未写入数据库的内容恢复到编辑修改之前的值
             if(!trV.Enabled)
             {
                 TreeNode tn = trV.SelectedNode;

@@ -16,6 +16,7 @@ namespace WCFTest
     {
         public string GetData(int value)
         {
+            //接受一个整形数
             return string.Format("You entered: {0}", value);
         }
 
@@ -35,8 +36,7 @@ namespace WCFTest
         #region get string from Web.config
         public string GetAppSettings(string aKey)
         {
-            return
-                ConfigurationManager.AppSettings.Get(aKey);
+            return ConfigurationManager.AppSettings.Get(aKey);
         }
         #endregion
 

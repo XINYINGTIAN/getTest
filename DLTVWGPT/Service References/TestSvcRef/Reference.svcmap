@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f8582c6d-0084-4275-8a64-ef9223a6ac88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03e3da6a-34d4-4d0b-90fc-324b3dfdc1c0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:17852/TestSvc.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TestSvc.disco" MetadataType="Disco" ID="6ce379ca-763d-4d4f-b4e2-674b82df34f1" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?disco" />
-    <MetadataFile FileName="TestSvc.wsdl" MetadataType="Wsdl" ID="f2a3bcba-38bf-4e0d-b601-39a72096d4bd" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?wsdl" />
-    <MetadataFile FileName="TestSvc.xsd" MetadataType="Schema" ID="21d20630-34f7-452c-91ea-bdd02bae1560" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd0" />
-    <MetadataFile FileName="TestSvc1.xsd" MetadataType="Schema" ID="992a363c-3431-4914-98ac-b3b68277968f" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd1" />
-    <MetadataFile FileName="TestSvc2.xsd" MetadataType="Schema" ID="871763a4-69cc-4804-8289-7b877aa1d826" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd2" />
+    <MetadataFile FileName="TestSvc.disco" MetadataType="Disco" ID="2463a8bd-a7eb-46a4-beb0-5d7f8201fda2" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?disco" />
+    <MetadataFile FileName="TestSvc.wsdl" MetadataType="Wsdl" ID="fff7bb19-c2bf-401b-b515-0578b03def29" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?wsdl" />
+    <MetadataFile FileName="TestSvc.xsd" MetadataType="Schema" ID="44653e47-cdb4-4efd-8943-b1763dc5efc2" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd0" />
+    <MetadataFile FileName="TestSvc1.xsd" MetadataType="Schema" ID="b19b66e8-c213-41b2-bf34-fdb1bbb8e987" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd1" />
+    <MetadataFile FileName="TestSvc2.xsd" MetadataType="Schema" ID="8d4da025-e21f-446b-9183-b637b3ac8a3e" SourceId="1" SourceUrl="http://localhost:17852/TestSvc.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

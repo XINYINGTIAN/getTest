@@ -47,16 +47,22 @@ namespace DLTVWGPT
 
 
         private void tsBtnLogout_Click(object sender, EventArgs e)
-        { 
+        {
             //VWGContext.Current.Session.IsLoggedOn = false;
             //VWGContext.Current.HttpContext.Session.Abandon();
 
-            ClsMsgBox.YesNo("确实要退出系统吗？",logout);
+            ClsMsgBox.YesNo("确实要退出系统吗？", logout);
+                //函数logout称为回调函数
+                //在回调函数中根据对话框的返回值执行相应代码
         }
         private void logout(object sender,EventArgs e)
         {
             DialogResult dr = ((Form)sender).DialogResult;
+            //sender参数是ClsMsgBox.YesNo对话框对象,父类是Form,因此可以强制地转换为Form类型
             if(dr==DialogResult.Yes)
+                //ClsMsgBox.YesNo对话框的返回值是一个dialogResult型的枚举值
+                //当点击是按钮时返回DialogResult.Yes
+                //当点击否按钮时返回DialogResult.No
             {
                 VWGContext.Current.Session.IsLoggedOn = false;
                 VWGContext.Current.HttpContext.Session.Abandon();

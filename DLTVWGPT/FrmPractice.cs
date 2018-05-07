@@ -12,6 +12,7 @@ using Gizmox.WebGUI.Common;
 using Gizmox.WebGUI.Forms;
 using DLTLib.Classes;
 using System.Web;
+using DLTVWGPT.TestSvcRef;
 
 #endregion
 
@@ -83,10 +84,11 @@ namespace DLTVWGPT
         }
         #endregion
 
-        #region 异常处理
+        #region 异常情况+处理
         private void testGetDataTableException()
         {
-            string cmd = "SELECT * FROM tlogin";
+            string cmd = "SELECT * FROM tlogina";
+            //代码中故意在表名tlogin后增加字母a，以引发异常
             try
             {
                 DataTable dt = ClsMSSQL.GetDataTable(cmd, ClsDBCon.ConStrKj);
@@ -99,6 +101,8 @@ namespace DLTVWGPT
             }
         }
         #endregion
+
+
         #region YgBB1
         private void testYgBB1()
         {
@@ -259,5 +263,15 @@ namespace DLTVWGPT
             lst.Items.Add(b);
         }
 
+        private void btnTestWCF_Click(object sender, EventArgs e)
+        {
+            lst.Items.Add("Writing Config");
+            lst.Items.Add("dm:" + textBox1.Text);
+            lst.Items.Add("nr:" + textBox2.Text);
+            TestSvcClient client = new TestSvcClient();
+            int ret = client.WriteConfig(textBox1.Text, textBox2.Text);
+            lst.Items.Add("return:" + ret);
+            client.Close();
+        }
     }
 }

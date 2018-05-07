@@ -248,6 +248,16 @@
     <Content Include="GRBB\YgBBb.aspx" />
     <Content Include="GRBB\YgBBData.aspx" />
     <Content Include="Readme.txt" />
+    <Content Include="Service References\TestSvcRef\DLTVWGPT.TestSvcRef.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\TestSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TestSvcRef\configuration.svcinfo" />
+    <None Include="Service References\TestSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\TestSvcRef\TestSvc.disco" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClsFuncsA.cs" />
@@ -310,6 +320,11 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Service References\TestSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ValuesController1.cs" />
     <Compile Include="XTGL\FrmConfig.cs">
       <SubType>UserControl</SubType>
@@ -474,6 +489,16 @@
     <Content Include="GRBB\grf\ygbb1.grf" />
     <Content Include="GRBB\grinstall\ygbb6.grf" />
     <Content Include="GRBB\grf\ygbb2.grf" />
+    <None Include="Service References\TestSvcRef\TestSvc.wsdl" />
+    <None Include="Service References\TestSvcRef\TestSvc.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestSvcRef\TestSvc1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestSvcRef\TestSvc2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -500,6 +525,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TestSvcRef\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

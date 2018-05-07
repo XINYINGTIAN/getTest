@@ -276,6 +276,10 @@ namespace DLTVWGPT.XTGL
         private void fillCmbXb()
         {
             List<ClsBhMcByte> lst = new List<ClsBhMcByte>();
+
+           // ClsBhMcByte aaa = new ClsBhMcByte(1, "男");
+           //string bbb= aaa.BhMc;
+           // aaa.Mc = "000";
             lst.Add(new ClsBhMcByte(1, "男"));
             lst.Add(new ClsBhMcByte(0, "女"));
             cmbXb.DataSource = lst;

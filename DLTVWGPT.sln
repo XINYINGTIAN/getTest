@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLTVWGPT", "DLTVWGPT\DLTVWGPT.csproj", "{16D02BA9-7B9E-4AAC-8B4B-B58E84CDD09A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C7569DB-0EA9-43FD-B0B7-627B58441C55} = {4C7569DB-0EA9-43FD-B0B7-627B58441C55}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLTLib", "DLTLib\DLTLib.csproj", "{844F0779-C345-4B97-8DAF-0D55B5CE7646}"
 EndProject

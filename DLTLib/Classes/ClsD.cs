@@ -14,18 +14,20 @@ namespace DLTLib.Classes
 
         public static void TextBoxTrim(Control ctrl)
         //TextBoxTrim接受一个类型为Control的参数，实际传入的应该是窗体Form(或其子类)
-        //、UserControl(或其子类)、GroupBox以及Panel等容器类的对象。
+        //UserControl(或其子类)、GroupBox以及Panel等容器类的对象。
 
         //TextBoxTrim能够将传入的容器对象及其所包括的各下级容器对象中所有的TextBox中的内容
         //全部进行去收尾空格操作
         {
             foreach (Control c in ctrl.Controls)
+                //for each循环遍历ctrl的Controls对象集合
             {
                 if (c is GroupBox)
                     TextBoxTrim(c);
                 //若有GroupBox则进行递归
                 else if (c is TextBox)
                 {
+                    //若有TextBox类的控件.则对Text施行Trim()操作
                     TextBox t = (TextBox)c;
                     t.Text = t.Text.Trim();
                 }

@@ -33,13 +33,19 @@ namespace DLTVWGPT.Classes
             #region 系统管理
             //模块管理
             if (string.Compare(aBm, "xtgl-mkgl", true) == 0)
+                //判断选中的功能菜单
+                //string compare的第三个参数为true表示忽略大小写的比较
             {
                 FrmMKGL c = new FrmMKGL();
+                //创建FrmMKGL类的对象
                 tp.Controls.Clear();
+                //将tpMain中的控件清除
                 tp.Controls.Add(c);
+                //将创建的FrmMKGL对象加载到tpMain中
                 return;
             }
             #endregion
+
             #region 选项管理
             //选项管理
             //int a=string.Compare(aBm, "xtgl-xxgl", true);
@@ -51,7 +57,8 @@ namespace DLTVWGPT.Classes
                 return;
             }
             #endregion
-
+            
+            #region 角色管理
             //角色管理
             if (string.Compare(aBm, "xtgl-jsgl", true) == 0)
             {
@@ -59,9 +66,11 @@ namespace DLTVWGPT.Classes
                 tp.Controls.Add(c);
                 return;
             }
+            #endregion
+            
             #region 配置管理
             //配置管理
-            if(string.Compare(aBm,"xtgl-config",true)==0)
+            if (string.Compare(aBm,"xtgl-config",true)==0)
             {
                 FrmConfig c = new FrmConfig();
                 tp.Controls.Add(c);

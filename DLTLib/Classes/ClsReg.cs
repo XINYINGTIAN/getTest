@@ -18,7 +18,7 @@ namespace DLTLib.Classes
         {
             get
             {
-                return new Regex(@"^\d*$");
+               return new Regex(@"^\d*$");
             }
         }
 

@@ -29,8 +29,10 @@ namespace DLTVWGPT.Login
 
         private void readCookie()
         {
+            //Context.Cookies与VWGContext.Current.Cookies是同一个东西
             string cookieAccount = Context.Cookies["Account"];
             string cookiePassword = Context.Cookies["Password"];
+            //判断cookies的值是否有值
             if (cookieAccount != ""&& cookiePassword !="")
             {
                 txtLoginName.Text = cookieAccount;
@@ -62,9 +64,11 @@ namespace DLTVWGPT.Login
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            #region 账户口令为空判断
+            #region 账户或账户口令为空判断
             txtLoginName.Text = txtLoginName.Text.Trim();
+            //Trim可以去除字符串前后的空格
             if(string.IsNullOrEmpty(txtLoginName.Text))
+                //string.IsNullOrEmpty函数可以判断一个字符串是否为空值
             {
                 ClsMsgBox.Jg("账户不能为空");
                 return;
@@ -77,6 +81,8 @@ namespace DLTVWGPT.Login
 
             }
             #endregion
+
+
             //获取用户信息
             vusersTableAdapter uta = new vusersTableAdapter();
             DSJckja.vusersDataTable u = uta.GetDataByLoginName(txtLoginName.Text);

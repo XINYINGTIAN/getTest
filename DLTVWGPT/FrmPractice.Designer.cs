@@ -40,6 +40,9 @@ namespace DLTVWGPT
             this.lst = new Gizmox.WebGUI.Forms.ListBox();
             this.tpDgv = new Gizmox.WebGUI.Forms.TabPage();
             this.dgv = new Gizmox.WebGUI.Forms.DataGridView();
+            this.textBox1 = new Gizmox.WebGUI.Forms.TextBox();
+            this.textBox2 = new Gizmox.WebGUI.Forms.TextBox();
+            this.btnTestWCF = new Gizmox.WebGUI.Forms.Button();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tcA)).BeginInit();
             this.tcA.SuspendLayout();
@@ -51,6 +54,9 @@ namespace DLTVWGPT
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Linen;
+            this.pnlTop.Controls.Add(this.btnTestWCF);
+            this.pnlTop.Controls.Add(this.textBox2);
+            this.pnlTop.Controls.Add(this.textBox1);
             this.pnlTop.Controls.Add(this.btnClear);
             this.pnlTop.Controls.Add(this.txtA);
             this.pnlTop.Controls.Add(this.btnTest);
@@ -72,7 +78,7 @@ namespace DLTVWGPT
             // txtA
             // 
             this.txtA.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtA.Location = new System.Drawing.Point(67, 58);
+            this.txtA.Location = new System.Drawing.Point(67, 67);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(268, 20);
             this.txtA.TabIndex = 1;
@@ -136,6 +142,29 @@ namespace DLTVWGPT
             this.dgv.TabIndex = 0;
             this.dgv.Click += new System.EventHandler(this.dgv_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(67, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(209, 35);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // btnTestWCF
+            // 
+            this.btnTestWCF.Location = new System.Drawing.Point(329, 8);
+            this.btnTestWCF.Name = "btnTestWCF";
+            this.btnTestWCF.Size = new System.Drawing.Size(75, 23);
+            this.btnTestWCF.TabIndex = 5;
+            this.btnTestWCF.Text = "TestWCF";
+            this.btnTestWCF.Click += new System.EventHandler(this.btnTestWCF_Click);
+            // 
             // FrmPractice
             // 
             this.Controls.Add(this.tcA);
@@ -165,5 +194,8 @@ namespace DLTVWGPT
         private TabPage tpDgv;
         private DataGridView dgv;
         private Button btnClear;
+        private Button btnTestWCF;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }
